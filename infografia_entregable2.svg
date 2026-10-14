@@ -1,0 +1,204 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="2000" viewBox="0 0 1400 2000" role="img" aria-labelledby="title description">
+  <title id="title">VICOG | Análisis modal y espectro sísmico</title>
+  <desc id="description">Infografía del funcionamiento de la aplicación Streamlit y resultados del edificio de tres niveles según el espectro E.030 ingresado.</desc>
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f8fc"/>
+      <stop offset="1" stop-color="#e8f0f8"/>
+    </linearGradient>
+    <linearGradient id="hero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#14243b"/>
+      <stop offset="1" stop-color="#27466b"/>
+    </linearGradient>
+    <linearGradient id="teal" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#058f91"/>
+      <stop offset="1" stop-color="#21b3ad"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="7" stdDeviation="10" flood-color="#19324d" flood-opacity=".10"/>
+    </filter>
+    <style>
+      text { font-family: "Segoe UI", Arial, sans-serif; fill: #17263b; }
+      .muted { fill: #607188; }
+      .white { fill: #ffffff; }
+      .hero-subtitle { fill: #c6d8ec; }
+      .accent-blue { fill: #17618b; }
+      .accent-teal { fill: #058f91; }
+      .accent-amber { fill: #b76d13; }
+      .accent-violet { fill: #535fc1; }
+      .small { font-size: 18px; }
+      .label { font-size: 17px; font-weight: 700; letter-spacing: 1.2px; }
+      .card { fill: #ffffff; stroke: #dce5ef; stroke-width: 1.5; }
+      .section-title { font-size: 27px; font-weight: 750; }
+      .body { font-size: 20px; }
+      .number { font-size: 34px; font-weight: 800; }
+    </style>
+  </defs>
+
+  <rect width="1400" height="2000" fill="url(#page)"/>
+
+  <rect x="54" y="48" width="1292" height="286" rx="30" fill="url(#hero)"/>
+  <rect x="92" y="83" width="188" height="54" rx="15" fill="#ffffff" fill-opacity=".12" stroke="#ffffff" stroke-opacity=".24"/>
+  <text x="186" y="120" text-anchor="middle" class="white" font-size="28" font-weight="850" letter-spacing="7">VICOG</text>
+  <text x="92" y="193" class="white" font-size="47" font-weight="800">ANÁLISIS MODAL</text>
+  <text x="92" y="247" class="white" font-size="31" font-weight="600">y espectro de diseño sísmico E.030</text>
+  <text x="94" y="294" class="hero-subtitle" font-size="20">Aplicación educativa · Python + Streamlit · edificio de corte de varios niveles</text>
+  <circle cx="1200" cy="144" r="66" fill="#20aaa6" fill-opacity=".20"/>
+  <circle cx="1200" cy="144" r="42" fill="none" stroke="#75d2c8" stroke-width="3"/>
+  <path d="M1175 161 L1188 143 L1200 153 L1226 119" fill="none" stroke="#ffffff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="1175" cy="161" r="5" fill="#ffffff"/><circle cx="1226" cy="119" r="5" fill="#ffffff"/>
+
+  <text x="70" y="390" class="section-title">¿Cómo funciona?</text>
+  <text x="70" y="423" class="body muted">El usuario ingresa el modelo, calcula la respuesta y consulta los resultados en pantalla o PDF.</text>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="457" width="294" height="204" rx="22" class="card"/>
+    <rect x="386" y="457" width="294" height="204" rx="22" class="card"/>
+    <rect x="702" y="457" width="294" height="204" rx="22" class="card"/>
+    <rect x="1018" y="457" width="312" height="204" rx="22" class="card"/>
+  </g>
+  <g>
+    <circle cx="111" cy="500" r="23" fill="#d9f2ef"/><text x="111" y="508" text-anchor="middle" font-size="22" font-weight="800" fill="#087f81">1</text>
+    <text x="148" y="507" class="label">INGRESA</text>
+    <text x="96" y="550" class="body" font-weight="700">Datos por piso</text>
+    <text x="96" y="583" class="small muted">Altura, masa y rigidez</text>
+    <text x="96" y="612" class="small muted">manualmente o desde TXT.</text>
+    <text x="96" y="640" class="small muted">Selecciona SI o kip-in.</text>
+
+    <circle cx="427" cy="500" r="23" fill="#e7e9fb"/><text x="427" y="508" text-anchor="middle" font-size="22" font-weight="800" fill="#535fc1">2</text>
+    <text x="464" y="507" class="label">CONFIGURA</text>
+    <text x="412" y="550" class="body" font-weight="700">Espectro E.030</text>
+    <text x="412" y="583" class="small muted">Ingresa Z, U, S, R, Tp</text>
+    <text x="412" y="612" class="small muted">y TL según el proyecto.</text>
+    <text x="412" y="640" class="small muted">La gráfica se actualiza.</text>
+
+    <circle cx="743" cy="500" r="23" fill="#fff0d9"/><text x="743" y="508" text-anchor="middle" font-size="22" font-weight="800" fill="#b76d13">3</text>
+    <text x="780" y="507" class="label">CALCULA</text>
+    <text x="728" y="550" class="body" font-weight="700">Respuesta modal</text>
+    <text x="728" y="583" class="small muted">Matrices M y K, periodos,</text>
+    <text x="728" y="612" class="small muted">modos, derivas, fuerzas</text>
+    <text x="728" y="640" class="small muted">y combinación SRSS.</text>
+
+    <circle cx="1059" cy="500" r="23" fill="#fbe4e9"/><text x="1059" y="508" text-anchor="middle" font-size="22" font-weight="800" fill="#b74460">4</text>
+    <text x="1096" y="507" class="label">CONSULTA</text>
+    <text x="1044" y="550" class="body" font-weight="700">Visualiza y exporta</text>
+    <text x="1044" y="583" class="small muted">Esquema del edificio, seis</text>
+    <text x="1044" y="612" class="small muted">gráficos de análisis y</text>
+    <text x="1044" y="640" class="small muted">reporte PDF descargable.</text>
+  </g>
+  <path d="M366 559 H378 M682 559 H694 M998 559 H1010" stroke="#91a3b7" stroke-width="3" stroke-linecap="round"/>
+  <path d="M373 552 L381 559 L373 566 M689 552 L697 559 L689 566 M1005 552 L1013 559 L1005 566" fill="none" stroke="#91a3b7" stroke-width="3"/>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="699" width="600" height="556" rx="24" class="card"/>
+    <rect x="696" y="699" width="634" height="556" rx="24" class="card"/>
+  </g>
+  <text x="102" y="749" class="section-title">Modelo estructural de referencia</text>
+  <text x="102" y="781" class="small muted">3 niveles · pisos numerados desde la base</text>
+
+  <g stroke="#1e4971" stroke-width="5" fill="none" stroke-linecap="round">
+    <path d="M163 1124 V858 M333 1124 V858"/>
+    <path d="M163 1124 H333 M163 1035 H333 M163 946 H333 M163 858 H333"/>
+  </g>
+  <g stroke="#6876d3" stroke-width="3" fill="none">
+    <path d="M119 1124 V1104 L132 1095 L106 1086 L132 1077 L106 1068 L132 1059 L119 1050 V1035"/>
+    <path d="M119 1035 V1015 L132 1006 L106 997 L132 988 L106 979 L132 970 L119 961 V946"/>
+    <path d="M119 946 V926 L132 917 L106 908 L132 899 L106 890 L132 881 L119 872 V858"/>
+  </g>
+  <g fill="#ffffff" stroke="#ed9b42" stroke-width="4">
+    <circle cx="248" cy="1035" r="11"/><circle cx="248" cy="946" r="11"/><circle cx="248" cy="858" r="11"/>
+  </g>
+  <g stroke="#ed9b42" stroke-width="3" fill="none">
+    <path d="M248 1057 V1084 M248 968 V995 M248 880 V907"/>
+    <path d="M242 1077 L248 1085 L254 1077 M242 988 L248 996 L254 988 M242 900 L248 908 L254 900"/>
+  </g>
+  <g font-size="17" font-weight="700">
+    <text x="78" y="1104">K1 = 108 kip/in</text>
+    <text x="78" y="1015">K2 = 90 kip/in</text>
+    <text x="78" y="926">K3 = 60 kip/in</text>
+    <text x="270" y="1082">W1 ≈ 834 kip</text>
+    <text x="270" y="993">W2 ≈ 741 kip</text>
+    <text x="270" y="905">W3 ≈ 649 kip</text>
+  </g>
+  <g stroke="#9aa9b9" stroke-width="1.6" fill="none">
+    <path d="M372 1124 V1035 M372 1035 V946 M372 946 V858"/>
+    <path d="M365 1124 H379 M365 1035 H379 M365 946 H379 M365 858 H379"/>
+  </g>
+  <g class="small muted">
+    <text x="385" y="1084">h1 = 11 in</text>
+    <text x="385" y="995">h2 = 11 in</text>
+    <text x="385" y="905">h3 = 11 in</text>
+  </g>
+  <text x="102" y="1180" class="small muted">Masa por piso: 2.16 · 1.92 · 1.68 kip·s²/in</text>
+  <text x="102" y="1214" class="small muted">Peso = masa × gravedad · rigidez y alturas leídas del modelo.</text>
+
+  <text x="728" y="749" class="section-title">Espectro de pseudoaceleración</text>
+  <text x="728" y="781" class="small muted">Forma E.030 aplicada · Sa graficada en unidades de g</text>
+  <rect x="735" y="813" width="556" height="339" rx="16" fill="#fbfdff" stroke="#e4ebf3"/>
+  <g stroke="#e3eaf2" stroke-width="1">
+    <path d="M790 858 H1265 M790 924 H1265 M790 990 H1265 M790 1056 H1265 M790 1120 H1265"/>
+    <path d="M790 858 V1120 M948 858 V1120 M1107 858 V1120 M1265 858 V1120"/>
+  </g>
+  <g stroke="#718399" stroke-width="2" fill="none">
+    <path d="M790 850 V1120 H1270"/>
+  </g>
+  <g class="small muted" font-size="15">
+    <text x="760" y="1126">0</text><text x="750" y="1062">0.03</text><text x="750" y="996">0.06</text><text x="750" y="930">0.09</text><text x="750" y="864">0.12</text>
+    <text x="786" y="1147">0</text><text x="943" y="1147">2</text><text x="1101" y="1147">4</text><text x="1258" y="1147">6</text>
+  </g>
+  <text x="1009" y="1180" class="small muted">Periodo T (s)</text>
+  <text x="739" y="975" class="small muted" transform="rotate(-90 739 975)">Sa (g)</text>
+  <path d="M790 844 L837 844 C847 881 856 921 869 955 C892 996 920 1022 948 1037 C1000 1061 1057 1084 1107 1096 C1160 1105 1212 1110 1265 1111"
+        fill="none" stroke="#17618b" stroke-width="5" stroke-linecap="round"/>
+  <path d="M837 844 V1120 M948 1037 V1120" stroke-dasharray="7 6" stroke-width="2.5" fill="none"/>
+  <path d="M837 844 V1120" stroke="#df6d78" stroke-width="2.5"/>
+  <path d="M948 1037 V1120" stroke="#75a844" stroke-width="2.5"/>
+  <g fill="#ed9b42" stroke="#ffffff" stroke-width="3">
+    <circle cx="833" cy="845" r="8"/><circle cx="854" cy="916" r="8"/><circle cx="945" cy="1037" r="8"/>
+  </g>
+  <g font-size="15" font-weight="700">
+    <text x="849" y="837" fill="#bd4f5f">Tp = 0.6 s</text>
+    <text x="956" y="1058" fill="#628d3b">TL = 2 s</text>
+  </g>
+  <text x="728" y="1211" class="small muted">Sa = Z·U·S·C(T)·g/R · valores usados: Z=0.35, U=1, S=1.15, R=8</text>
+
+  <text x="70" y="1323" class="section-title">Resultados del análisis · caso de referencia</text>
+  <text x="70" y="1356" class="small muted">Datos del ejercicio inicial en unidades imperiales · respuesta espectral E.030</text>
+  <g filter="url(#shadow)">
+    <rect x="70" y="1381" width="294" height="161" rx="22" fill="#ffffff" stroke="#dce5ef"/>
+    <rect x="386" y="1381" width="294" height="161" rx="22" fill="#ffffff" stroke="#dce5ef"/>
+    <rect x="702" y="1381" width="294" height="161" rx="22" fill="#ffffff" stroke="#dce5ef"/>
+    <rect x="1018" y="1381" width="312" height="161" rx="22" fill="#ffffff" stroke="#dce5ef"/>
+  </g>
+  <g>
+    <text x="98" y="1423" class="label muted">PERIODO FUNDAMENTAL</text>
+    <text x="98" y="1481" class="number accent-blue">1.961 s</text>
+    <text x="98" y="1515" class="small muted">T1 = 1.961 · T2 = 0.808 · T3 = 0.541 s</text>
+
+    <text x="414" y="1423" class="label muted">PARTICIPACIÓN MODO 1</text>
+    <text x="414" y="1481" class="number accent-teal">86.82%</text>
+    <text x="414" y="1515" class="small muted">Masa participante acumulada: 100%</text>
+
+    <text x="730" y="1423" class="label muted">CORTANTE BASAL · SRSS</text>
+    <text x="730" y="1481" class="number accent-amber">77.869 kip</text>
+    <text x="730" y="1515" class="small muted">Combinación modal SRSS</text>
+
+    <text x="1046" y="1423" class="label muted">DESPLAZAMIENTO AZOTEA</text>
+    <text x="1046" y="1481" class="number accent-violet">1.900 in</text>
+    <text x="1046" y="1515" class="small muted">Desplazamiento combinado SRSS</text>
+  </g>
+
+  <g filter="url(#shadow)">
+    <rect x="70" y="1580" width="1260" height="282" rx="24" class="card"/>
+  </g>
+  <text x="104" y="1632" class="section-title">¿Qué entrega la aplicación?</text>
+  <g class="body">
+    <circle cx="119" cy="1686" r="7" fill="#08a09b"/><text x="143" y="1693">Matriz de masa M y matriz de rigidez K del edificio de corte.</text>
+    <circle cx="119" cy="1734" r="7" fill="#08a09b"/><text x="143" y="1741">Periodos naturales, frecuencias, formas modales y masa participante.</text>
+    <circle cx="119" cy="1782" r="7" fill="#08a09b"/><text x="143" y="1789">Desplazamientos, derivas, fuerzas, cortantes y aceleraciones por nivel.</text>
+    <circle cx="119" cy="1830" r="7" fill="#08a09b"/><text x="143" y="1837">Gráficos de resultados y reporte PDF para exportar.</text>
+  </g>
+  <rect x="70" y="1891" width="1260" height="68" rx="18" fill="#e4edf6"/>
+  <text x="99" y="1921" class="small" font-weight="700">Nota académica</text>
+  <text x="99" y="1947" class="small muted">La respuesta depende de Z, U, S, R, Tp y TL ingresados. Verifica sus valores aplicables al sitio y proyecto con la Norma E.030 vigente.</text>
+</svg>
