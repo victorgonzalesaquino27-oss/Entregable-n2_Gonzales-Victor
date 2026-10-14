@@ -8,12 +8,13 @@ masas ingresadas manualmente o importadas del TXT.
 
 ## Estructura del proyecto
 
-Todos los archivos del entregable están dentro de la carpeta `ENTREGABLE 2`.
+Todos los archivos del entregable están dentro de la carpeta
+`ET2_PYTHON_VICTOR ALEXANDER-GONZALES AQUINO`.
 La interfaz, los cálculos y los gráficos están separados para que cada parte
 del programa sea fácil de identificar:
 
 ```text
-ENTREGABLE 2/
+ET2_PYTHON_VICTOR ALEXANDER-GONZALES AQUINO/
 ├── app.py                       # Página web e interfaz Streamlit
 ├── src/
 │   └── analisis_modal/
